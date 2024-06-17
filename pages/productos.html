@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,400;1,500;1,600&family=Comfortaa:wght@300..700&family=Martian+Mono:wght@800&family=Montserrat+Alternates:wght@600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Productos</title>
+</head>
+<body>
+    <script src="../script.js"></script>
+    <div class="contenedor">
+        <h1 class="titulo">GlamSpot</h1>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-around w-100">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sobrenosotros.html">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="noticias.html">Noticias</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="cuenta.html">Iniciar sesión</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light bg-dark btn-custom" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+    </div>
+    <div class="productos">
+        <div class="imagen">
+            <img class="labial" src="../assets/labial1.jpg" alt="Imagen 1" onclick="mostrarDetalle('Labial bordo', '../assets/labial1.jpg', '10.99')">
+            <p class="texto">Labial bordo</p>
+        </div>
+        <div class="imagen">
+            <img class="labial" src="../assets/labial2.jpg" alt="Imagen 2" onclick="mostrarDetalle('Labial rojo', '../assets/labial2.jpg', '10.99')">
+            <p class="texto">Labial rojo</p>
+        </div>
+        <div class="imagen">
+            <img class="labial" src="../assets/labial3.jpg" alt="Imagen 3" onclick="mostrarDetalle('Labial líquido', '../assets/labial3.jpg', '15.99')">
+            <p class="texto">Labial líquido</p>
+        </div>
+        <div class="imagen">
+            <img class="labial" src="../assets/paleta.jpg" alt="Imagen 4" onclick="mostrarDetalle('Paleta', '../assets/paleta.jpg', '17.50')">
+            <p class="texto">Paleta</p>
+        </div>
+        <div class="imagen">
+            <img class="labial" src="../assets/base.jpg" alt="Imagen 5" onclick="mostrarDetalle('Base', '../assets/base.jpg', '12.99')">
+            <p class="texto">Base</p>
+        </div>
+        <div class="imagen">
+            <img class="labial" src="../assets/blush.jpg" alt="Imagen 6" onclick="mostrarDetalle('Blush', './assets/blush.jpg', '7.99')">
+            <p class="texto">Blush</p>
+        </div>
+        <div id="detalle-producto" class="detalle-producto">
+            <div class="detalle-contenido">
+                <button class="cerrar" onclick="cerrarDetalle()">×</button>
+                <h2 id="nombre-producto"></h2>
+                <img id="imagen-producto" class="detalle-imagen" src="" alt="">
+                <p id="descripcion-producto"></p>
+                <p id="precio-producto"></p>
+                <button id="boton-comprar" class="btn btn-outline-light bg-dark btn-hover-white" onclick="comprarProducto()">Comprar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

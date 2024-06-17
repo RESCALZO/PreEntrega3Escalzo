@@ -229,3 +229,23 @@ video {
     font-size: 24px;
     color: #333;
 }
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 80px;
+  text-align: center; 
+  height: auto;
+  justify-items: center;
+  margin-top: 50px;
+}
+
+.noticias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
+  gap: 80px;
+  text-align: center; 
+  height: auto;
+  justify-items: center;
+  margin-top: 50px;
+}

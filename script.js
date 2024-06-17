@@ -14,6 +14,18 @@ function mostrarDetalle(nombre, rutaImagen, precio) { // definimos parámetros p
     detalleProducto.style.display = 'flex';
 }
 
+function mostrarNoticia(nombre, rutaImagen) {
+    var detalleProducto = document.getElementById('detalle-producto'); 
+    var nombreProducto = document.getElementById('nombre-producto');
+    var descripcionProducto = document.getElementById('descripcion-producto');
+    var imagenProducto = document.getElementById('imagen-producto');
+    
+    nombreProducto.textContent = "Noticia";
+    imagenProducto.src = rutaImagen;
+    descripcionProducto.textContent = nombre;
+    detalleProducto.style.display = 'flex';
+}
+
 // cerrar contenedor al cliquear 'x' //
 function cerrarDetalle() {
     var detalleProducto = document.getElementById('detalle-producto');
