@@ -1,0 +1,230 @@
+.titulo {
+  font-family: "Roboto", sans-serif;
+  font-size: 5rem;
+  text-align: center;
+  color: #262626;
+}
+
+.textoHeader {
+  padding-top: 1%;
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  padding-left: 3rem;
+}
+
+.contenedor {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+@media (max-width: 768px) {
+  .textoHeader {
+    padding-left: 1rem;
+    padding-top: 1.2rem;
+    font-size: 13px;
+  }
+}
+.navbar {
+  background-color: #fff;
+}
+.navbar .navbar-nav .nav-link {
+  color: #262626;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: #919191;
+}
+
+.btn-custom:hover {
+  color: #7f7f7f !important;
+}
+
+.contenedor-video {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #9c9c9c;
+}
+.contenedor-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contenedor-imagenes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  text-align: center;
+  height: auto;
+  justify-items: center;
+}
+.contenedor-imagenes .imagen {
+  border: 1px solid #9c9c9c;
+  -webkit-border-radius: 20%;
+  -moz-border-radius: 20%;
+  -ms-border-radius: 20%;
+  border-radius: 20%;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  cursor: pointer;
+}
+.contenedor-imagenes .labial {
+  width: 300px;
+  height: auto;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+.contenedor-imagenes .labial:hover {
+  opacity: 50%;
+}
+.contenedor-imagenes .texto {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-family: "Roboto", sans-serif;
+}
+.imagen:hover .contenedor-imagenes .texto {
+  opacity: 1;
+}
+
+.seccion-historia {
+  background-color: #f2f2f2;
+  padding: 50px 0;
+  text-align: center;
+  margin-top: 20px;
+}
+.seccion-historia .texto-historia,
+.seccion-historia .imagen-historia {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  text-align: left;
+  vertical-align: middle;
+  font-family: "Roboto", sans-serif;
+  color: #515151;
+}
+.seccion-historia .texto-historia {
+  padding-right: 20px;
+}
+.seccion-historia .imagen-historia img {
+  max-width: 100%;
+  height: auto;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  border-radius: 30px;
+}
+
+.seccion-newsletter {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  text-align: center;
+}
+.seccion-newsletter h2 {
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+}
+.seccion-newsletter .formulario {
+  margin-bottom: 20px;
+}
+.seccion-newsletter .formulario input[type=email],
+.seccion-newsletter .formulario button {
+  padding: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #9c9c9c;
+}
+.seccion-newsletter .formulario button {
+  background-color: #575757;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+.seccion-newsletter .enlaces {
+  margin-top: 20px;
+}
+.seccion-newsletter .enlaces a {
+  margin: 0 10px;
+  color: #929292;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+.seccion-newsletter .enlaces a:hover {
+  color: #262626;
+}
+.seccion-newsletter .derechos {
+  margin-top: 30px;
+  color: #929292;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+
+.detalle-producto {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.detalle-producto .detalle-contenido {
+  background-color: #fff;
+  padding: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+}
+.detalle-producto .detalle-contenido .detalle-imagen {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+.detalle-producto .detalle-contenido #precio-producto {
+  font-size: 18px;
+  color: #262626;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.detalle-producto .detalle-contenido .cerrar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #262626;
+}
+
+.productos,
+.noticias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 80px;
+  text-align: center;
+  height: auto;
+  justify-items: center;
+  margin-top: 50px;
+}
+
+/*# sourceMappingURL=styles.css.map */
